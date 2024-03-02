@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Графический редактор</title>
+    <style>
+        #canvas {
+            cursor: pointer;
+	        border: 2px solid #25B99A;
+            border-radius: 12px;
+            color: #25B99A;
+        }
+
+        #toolbar {
+	        background: aliceblue;
+            margin-bottom: 10px;
+            border: 5px solid #25B99A;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .algorithm_button {
+            transition-duration: 0.5s;
+            margin: 5px;
+            border:2px solid #25B99A;
+            color: #25B99A;
+            background-color: aliceblue;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        .algorithm_button:hover{
+            border:2px solid aliceblue;
+            color: aliceblue;
+            background-color: #25B99A;
+        }
+
+        .delete_button{
+            transition-duration: 0.5s;
+            margin: 5px;
+            border:2px solid darkred;
+            color: darkred;
+            background-color: aliceblue;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        .delete_button:hover{
+            border:2px solid aliceblue;
+            color: aliceblue;
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+<div id="toolbar">
+    <button class="algorithm_button" onclick="setAlgorithm('dda')">Алгоритм: ЦДА</button>
+    <button class="algorithm_button" onclick="setAlgorithm('bresenham')">Алгоритм: Целочисленный Брезенхем</button>
+    <button class="algorithm_button" onclick="setAlgorithm('wu')">Алгоритм: Ву</button>
+    <button class="delete_button" onclick="clearCanvas()">Очистить</button>
+</div>
+<canvas id="canvas" width="1200" height="1200"></canvas>
+
+<script src="app.js"></script>
+</body>
+</html>
