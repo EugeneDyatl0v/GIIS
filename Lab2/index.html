@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>graph</title>
+    <style>
+        #canvas {
+            border: 2px solid #25B99A;
+            cursor:pointer;
+            border-radius: 12px;
+        }
+
+        #toolbar {
+            margin-bottom: 10px;
+        }
+
+        #toolbar button {
+            position: absolute;
+            right: 5px;
+            margin-right: 5px;
+            border: 2px solid darkred;
+            border-radius: 12px;
+            color: darkred;
+            background-color: aliceblue;
+            width: 20%;
+            height: 4vh;
+        }
+
+        #toolbar button:hover{
+            margin-right: 5px;
+            border: 2px solid darkred;
+            border-radius: 12px;
+            color: aliceblue;
+            background-color: darkred;
+        }
+
+        #toolbar select{
+            margin-right: 5px;
+            border: 2px solid #25B99A;
+            border-radius: 12px;
+            color: #25B99A;
+            background-color: aliceblue;
+            width: 20%;
+            height: 4vh;
+        }
+    </style>
+</head>
+<body>
+    <div id = "toolbar">
+        <select id="curveType">
+            <option value="circle">Окружность</option>
+            <option value="ellipse">Эллипс</option>
+            <option value="hyperbola">Гипербола</option>
+            <option value="parabola">Парабола</option>
+        </select>
+        <button onclick="clearCanvas()">Очистить холст</button>
+    </div>
+    <canvas id="canvas" width="1825" height="900"></canvas>
+    <script src="app.js"></script>
+</body>
+</html>
